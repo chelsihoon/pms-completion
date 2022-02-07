@@ -514,15 +514,19 @@ export default {
 #battery_situation #cnbSet .cnb_wrap .depth_3_wrap:nth-child(1) {
     display: flex;
 }
-
+#battery_cnt_top_wrap .cnt_top select:nth-child(1) {
+    display: flex;
+}
 #battery_situation_cnt .battery_cnt_top_wrap .cnt_top .pcs {
     display: block;
+}
+#battery_situation_cnt .battery_situation_cnt_wrap > div {
+    flex: 1;
 }
 #battery_situation_cnt .battery_situation_cnt_wrap {
     display: flex;
     flex-wrap: wrap;
     padding: 24px 32px;
-    justify-content: center;
 }
 #battery_situation_cnt .cnt_wrap {
     background-color: #fff;
@@ -566,7 +570,7 @@ export default {
     width: 100%;
 }
 #battery_situation_cnt .cnt_left .cnt_left_top > div {
-    width: 304px;
+    min-width: 304px;
     height: 85px;
     display: flex;
     justify-content: space-between;
@@ -575,6 +579,7 @@ export default {
     border-radius: 4px;
     margin-bottom: 8px;
 }
+
 #battery_situation_cnt .cnt_left .cnt_left_top > div:last-child {
     margin-bottom: 0px;
 }
@@ -681,13 +686,14 @@ export default {
 }
 #battery_situation_cnt li > * {
     height: 100%;
-    width: 56px;
+    min-width: 56px;
     background-color: #f5f5f5;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 8px;
+    flex: 0.5;
 }
 #battery_situation_cnt li > *:last-child {
     margin-right: 0px;
@@ -698,24 +704,19 @@ export default {
     margin-right: 32px;
     margin-bottom: 32px;
 }
-#battery_situation_cnt .cnt_center li > *:first-child {
-    width: 452px;
-    color: #444;
-    font-weight: 500;
-    font-size: 16px;
-    justify-content: flex-start;
-    padding: 16px;
-}
+
 #battery_situation_cnt .cnt_right {
     width: 564px;
     position: relative;
 }
-#battery_situation_cnt .cnt_right li > *:first-child {
-    width: 388px;
+#battery_situation_cnt .cnt_right li .status,
+#battery_situation_cnt .cnt_center li .status {
+    /* min-width: 388px; */
     color: #444;
     font-weight: 500;
     font-size: 16px;
     justify-content: flex-start;
     padding: 16px;
+    flex: 4;
 }
 </style>
